@@ -41,3 +41,50 @@ Os dados podem ser públicos ou privados (com autorização), e são agregados p
 ```bash
 git clone https://github.com/nelsonmab/predictive-crime-system.git
 cd predictive-crime-system
+
+Subir todo o sistema via Docker Compose
+
+docker-compose up --build
+
+
+Backend FastAPI: http://localhost:8000
+
+Frontend React: http://localhost:3000
+
+Banco PostGIS: localhost:5432
+
+O backend executa o seed automático populando o banco com dados sintéticos.
+
+Notebook baseline (opcional)
+
+jupyter notebook models/baseline.ipynb
+
+
+Treina RandomForest em dados sintéticos
+
+Visualiza heatmaps
+
+Calcula métricas AUC-PR
+
+Testar API
+
+/health → retorna status do backend
+
+/predict → retorna previsões de crimes
+
+LGPD e boas práticas
+
+Dados devem ser agregados por célula
+
+Anonimização obrigatória de dados privados
+
+Controle de acesso e logs recomendados
+
+Licença
+
+© 2025 Nelson Oliveira de Almeida
+Todos os direitos reservados.
+
+Para uso público, recomenda-se atribuir créditos ao autor.
+
+
